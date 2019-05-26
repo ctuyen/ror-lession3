@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_26_161656) do
+ActiveRecord::Schema.define(version: 2019_05_26_164811) do
 
   create_table "miniposts", force: :cascade do |t|
     t.text "content"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2019_05_26_161656) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "password", default: "1111"
+    t.string "password"
   end
 
 end
