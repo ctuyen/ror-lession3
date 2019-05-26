@@ -4,7 +4,15 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    if(params[:email].nil?)
+      @users = User.all
+    else
+      # @usersLocal = User.all
+      # @usersLocal.each do |user|
+      #   user.local = user.split('@').first
+      # @users = User.where(params[:email] == @usersLocal.local)
+      @users = User.where(email: params[:email])
+    end
   end
 
   # GET /users/1

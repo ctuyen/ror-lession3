@@ -12,6 +12,10 @@
   </thead>
 
   <tbody>
+    <% if(@users.nil?) %>
+      <tr><td colspan="6">User doesn't exists.</td></tr>
+    <% end %>
+    <% else %>
     <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
