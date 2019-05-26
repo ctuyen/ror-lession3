@@ -2,7 +2,7 @@
 
 <h1>Miniposts</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Content</th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= minipost.content %></td>
         <td><%= minipost.user_id %></td>
-        <td><%= link_to 'Show', minipost %></td>
-        <td><%= link_to 'Edit', edit_minipost_path(minipost) %></td>
-        <td><%= link_to 'Destroy', minipost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="btn btn-default"><%= link_to 'Show', minipost %></td>
+        <td class="btn btn-default"><%= link_to 'Edit', edit_minipost_path(minipost) %></td>
+        <td class="btn btn-danger"><%= link_to 'Destroy', minipost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Minipost', new_minipost_path %>
+<button class="btn btn-default"><%= link_to 'New Minipost', new_minipost_path %></button>
